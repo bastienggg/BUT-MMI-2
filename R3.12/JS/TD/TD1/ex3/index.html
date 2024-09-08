@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R3.12 JS TD1 EX3</title>
+  </head>
+  <body>
+    <script>
+      let randomColor = () => {
+        let x = Math.floor(Math.random() * 256);
+        let y = Math.floor(Math.random() * 256);
+        let z = Math.floor(Math.random() * 256);
+        return `rgb(${x}, ${y}, ${z})`;
+      };
+
+      //   document.body.style.backgroundColor = randomColor();
+
+      let createSquare = (taille, padding) => {
+        let square = document.createElement("div");
+        square.style.backgroundColor = randomColor();
+        square.style.width = taille;
+        square.style.height = taille;
+        square.style.padding = padding;
+        square.style.display = "inline-block";
+        document.body.appendChild(square);
+      };
+
+      let multipleSquare = (nb, taille, padding) => {
+        for (let i = 0; i < nb; i++) {
+          createSquare(taille, padding);
+        }
+      };
+
+      // multipleSquare(100, "50px", "5px");
+
+      let imbricateSquare = (nb) => {
+        for (let i = 0; i < nb; i++) {}
+      };
+    </script>
+  </body>
+</html>

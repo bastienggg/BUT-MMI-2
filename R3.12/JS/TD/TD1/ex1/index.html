@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R3.12 JS TD1 EX1</title>
+  </head>
+  <body>
+    <span>Javascript</span>
+
+    <a class="a1" href="https://github.com/bastienggg">Git</a>
+    <a class="a2" href="https://biome.unilim.fr/">Biome</a>
+    <a href="https://www.youtube.com/">youtube</a>
+
+    <script>
+      let txt = document.querySelector("span");
+      txt.textContent += " c'est trés bien";
+
+      /*
+
+      let a1 = document.querySelector(".a1"); // selectionne le premier lien
+      let a2 = document.querySelector(".a2"); // selectionne le deuxieme lien
+      let tmp = a1.href; // stockage temporaire
+
+      a1.href = a2.href; // echange des liens
+      a2.href = tmp;
+
+      */
+
+      let links = document.querySelectorAll("a"); // selectionne tous les liens
+      for (let i = 0; i < links.length; i++) {
+        let pos1 = Math.floor(Math.random() * links.length); // position aleatoire
+        let pos2 = Math.floor(Math.random() * links.length); // position aleatoire
+
+        let link1 = links[pos1]; // lien 1
+        let link2 = links[pos2]; // lien 2
+        let tmp = link1.href; // stockage temporaire
+
+        link1.href = link2.href; // echange des liens
+        link2.href = tmp;
+      }
+
+      // let links = document.querySelectorAll("a"); // selectionne tous les liens
+      // for (let i = 0; i < links.length; i++) {
+      //   let link = links[i]; // lien
+      //   link.remove(); // supprime le lien
+      // }
+    </script>
+  </body>
+</html>
