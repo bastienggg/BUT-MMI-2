@@ -23,6 +23,7 @@ namespace POO\Level2\Stage2;
 
 
 
+
 /*  Q1 : Une classe s'accompagne toujours d'un constructeur
 
     Lorsque l'on définit une classe, il est hautement recommandé de définir un constructeur.
@@ -32,6 +33,7 @@ namespace POO\Level2\Stage2;
     Ajoutez à la classe Amiibo un constructeur qui initialise chaque propriété de type string à une
     chaine vide et le prix à 0.0
 */
+
 
 
 /*  Q2 : Un constructeur peut avoir des paramètres. Et c'est pratique.

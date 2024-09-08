@@ -30,6 +30,13 @@ $zelda_image = "./asset/amiibo-zelda_2x.png";
 /* Data for Link [Rider] Amiibo */
 // ??
 
+$rider_title = "Link [Rider]";
+$rider_compatibility = "Switch and Switch Lite";
+$rider_description = "Cette monture archéonique vous emmènera loin !Découvrez vite les avantages de cet amiibo compatible avec de multiples jeux";
+$rider_price = 58.25;
+$rider_image = "./asset/amiibo-link-rider_2x.png";
+
+
 
 /*  BILAN (à lire une fois l'exerice terminé)
 
