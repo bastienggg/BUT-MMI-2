@@ -153,19 +153,6 @@ h6 {
   font-size: var(--fs-600);
   font-weight: var(--fw-400);
 }
-.pricing-plan--dark {
-  background-color: var(--color-neutral-900);
-  border-color: var(--color-primary-100);
-}
-.pricing-plan--dark__title {
-  color: var(--color-primary-100);
-}
-.pricing-plan--dark__feature {
-  color: var(--color-neutral-100);
-}
-.pricing-plan--dark__feature::after {
-  background-color: var(--color-neutral-100);
-}
 
 body {
   display: flex;
