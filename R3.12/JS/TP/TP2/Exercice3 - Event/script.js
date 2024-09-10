@@ -29,8 +29,9 @@
   Pour compléter cette fonction, vous pouvez repartir du dernier exercice du TP1. Mais il vous faudra par la suite
   la rectifier (un tout petit peu)
 */
-let handler_clickOnButton = function(ev){
-    // complétez le code de cette fonction
+let handler_clickOnButton = function (ev) {
+   // Ajoutez ici vos instructions
+
 };
 
 /* Sur quel élément (au singulier !) peut-on surveiller tous les 'clicks' sur les spans ?

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>My Sweet Recipes !</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+
+        <div >
+            
+            <h2>My Sweet Recipes !</h2>
+            <div class="pattern"></div>
+
+            <nav class="sidenav">
+                <h4>Select a recipe !</h4>
+                
+                <div class='filters'>
+                    <i data-filter='all'>All -</i>
+                    <i data-filter='entree'>Starter -</i>
+                    <i data-filter='plat'>Main -</i>
+                    <i data-filter='dessert'>Desert</i>
+                </div>
+
+                <ul>
+                    <!-- dynamic rendering of recipes name according to the selected filter-->
+                </ul>
+
+            </nav>
+
+           
+            <section class="content">
+
+            </section>
+        </div>
+
+        <template id="recipe_template">
+            <div class="card">
+            
+                <img class="card__header" src="{{url}}">
+
+                <h1 class="card__food">{{titre}}</h1>
+
+                <div class="card__sub">
+                    <i class="card__detail">{{temps}} Mins</i> 
+                    <i class="card__detail">Niveau : {{niveau}}</i>
+                    <i class="card__detail">Coût : {{cout}}</i>
+                </div>
+
+                <div class="card__content">
+                    <p class="card__info">{{texte}}</p>
+                    <p class="card__info"><ul>{{liste}}</ul></p>
+                </div>
+               
+                <a href="#" class="card__btn">Let's Cook!</a>
+            </div>
+        </template>
+
+        <template id="ingredient_template">
+            <li><span class="ingredient">{{nom}}</span><span class="quantity">({{combien}})</span></li>
+        </template>
+
+        <template id="item_menu_template">
+            <li data-id="{{id}}">{{nom}}</li>
+        </template>
+
+       <script src='script.js'></script><!-- le travail à réaliser est à rédiger dans ce fichier-->
+       
+    </body>
+</html>

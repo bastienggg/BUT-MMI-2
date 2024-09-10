@@ -101,6 +101,23 @@ let dataFigure = {
 
 // Ajoutez votre code ici
 
+let figure = document.createElement('figure');
+figure.classList.add('figure');
+
+let img = document.createElement('img');
+img.classList.add(dataFigure.image.css);
+img.src = dataFigure.image.url;
+img.alt = dataFigure.image.alt;
+
+let figcaption = document.createElement('figcaption');
+figcaption.classList.add(dataFigure.caption.css);
+figcaption.textContent = dataFigure.caption.txt;
+
+figure.appendChild(img);
+figure.appendChild(figcaption);
+
+columns[2].insertBefore(figure, columns[2].lastElementChild);
+
 
 /* Q4
  
@@ -135,3 +152,138 @@ let article = {
 }
 
 // Ajoutez votre code ici
+
+let template = document.getElementById('headline');
+let clone = document.importNode(template.content, true);
+let spans = clone.querySelectorAll('span');
+spans[0].textContent = article.title;
+spans[1].textContent = "by" + article.author.toUpperCase();
+
+let txt = columns[4];
+txt.replaceChild(clone, txt.firstElementChild);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+length.ezafe
+
+
+
+
+
+
+
+
+
+
