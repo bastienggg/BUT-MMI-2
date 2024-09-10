@@ -53,7 +53,15 @@
       };
       // imbricateSquare(1000);
 
-      setInterval(changeColor, 1000);
+      multipleSquare(100);
+
+      let handler_changeColor = function (ev) {
+        ev.target.style.backgroundColor = randomColor();
+      };
+      let alldivs = document.querySelectorAll("div");
+      for (let div of alldivs) {
+        div.addEventListener("click", handler_changeColor);
+      }
     </script>
   </body>
 </html>
