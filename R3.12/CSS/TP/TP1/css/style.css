@@ -109,6 +109,9 @@ h6 {
   text-transform: uppercase;
   text-align: center;
 }
+.pricing-plan__title--dark {
+  color: var(--color-neutral-100);
+}
 .pricing-plan__features {
   list-style: none;
 }
@@ -145,6 +148,17 @@ h6 {
   border: none;
   border-radius: var(--size-8px);
 }
+.pricing-plan__cta-button--dark {
+  margin: 1rem;
+  text-decoration: none;
+  padding: 0.75rem;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-400);
+  border: none;
+  border-radius: var(--size-8px);
+  background-color: var(--color-neutral-100);
+  color: var(--color-primary-400);
+}
 .pricing-plan__price {
   font-size: var(--fs-900);
   font-weight: var(--fw-700);
@@ -153,9 +167,22 @@ h6 {
   font-size: var(--fs-600);
   font-weight: var(--fw-400);
 }
+.pricing-plan--dark {
+  background-color: var(--color-primary-400);
+  color: var(--color-neutral-100);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  height: 80%;
+  gap: 1rem;
+  padding: 1rem;
+}
 
 body {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   height: 100vh;

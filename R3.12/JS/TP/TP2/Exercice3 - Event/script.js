@@ -30,7 +30,6 @@
   la rectifier (un tout petit peu)
 */
 let handler_clickOnButton = function (ev) {
-   // Ajoutez ici vos instructions
 
 };
 
@@ -38,6 +37,9 @@ let handler_clickOnButton = function (ev) {
    Identifiez cet élément et attachez-y votre fonction handler_clickOnButton */
 
 // Ajoutez ici vos instructions
+
+
+
 
 /*  [TEST]
     Les boutons fonctionnnent ? Bravo ! Et si vous cliquez un petit peu à côté ?
