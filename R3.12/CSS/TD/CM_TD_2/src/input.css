@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --clr-text-base: 0 0% 100%;
+    --clr-text-muted: 228 96% 89%;
+    --clr-text-inverted: 243 75% 59%;
+
+    --clr-fill: 245 58% 51%;
+    --clr-button-accent: 0 0% 100%;
+    --clr-button-accent-hover: 226 100% 97%;
+    --clr-button-muted: 239 84% 67%;
+  }
+}
