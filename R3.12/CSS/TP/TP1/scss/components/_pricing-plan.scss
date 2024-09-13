@@ -17,6 +17,7 @@
     text-transform: uppercase;
     text-align: center;
     &--dark {
+      text-transform: uppercase;
       color: var(--color-neutral-100);
     }
   }

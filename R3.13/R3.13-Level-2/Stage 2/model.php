@@ -86,42 +86,78 @@ namespace POO\Level2\Stage2;
 
 class Amiibo
 {
-        public $title;
-        public $subtitle;
-        public $description;
-        public $price;
-        public $image;
+    private string $title;
+    private string $subtitle;
+    private string $description;
+    private float $price;
+    private string $image;
 
-        public function __construct(){
-            $this-> $title = "";
-            $this-> $subtitle = "";
-            $this-> $description = "";
+    public function __construct($n , $c){
+            $this->title = $n;
+            $this->subtitle = $c;
+            $this->description = "";
+            $this->price = 0.0;
+            $this->image = "";
         }
+    public function getName()
+    {
+        return $this->title;
+    }
+    public function getManufacturer()
+    {
+        return $this->subtitle;
+    }
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+    public function getPrice()
+    {
+        return round($this->price * 1.2, 2);
+    }
+    public function setPrice($price)
+    {
+        $this->price = $price;
+    }
+    public function getImage() {
+        return $this->image;
+    }
+
+    public function setImage($image) {
+        $tab = explode(".", $image);
+        $ext = array_pop($tab);
+        if ($ext=="png" || $ext=="jpg" || $ext=="jpeg"){
+            $this->image = $image;
+        }
+    }
 }
 
-$archer = new Amiibo();
-$archer->title = "Link [Archer]";
-$archer->subtitle = "Switch and Switch Lite";
-$archer->description = "Cette flèche archéonique vous emmènera loin ! Découvrez
-        vite les avantages de cet amiibo compatible avec de multiples jeux";
-$archer->price = 58.25;
-$archer->image = "./asset/amiibo-link-archer_2x.png";
+$archer = new Amiibo("Link [Archer]", "Switch and Switch Lite");
+// $archer->title = "Link [Archer]";
+// $archer->subtitle = "Switch and Switch Lite";
+$archer->setDescription("Cette flèche archéonique vous emmènera loin ! Découvrez
+vite les avantages de cet amiibo compatible avec de multiples jeux");
+$archer->setPrice(58.25);
+$archer->setImage("./asset/amiibo-link-archer_2x.png");
 
-$zelda = new Amiibo();
-$zelda->title = "Zelda";
-$zelda->subtitle = "Switch, Wii U, Nintendo DS";
-$zelda->description = "Ne sous-estimez pas la princesse Zelda ! Découvrez
-        vite les avantages de cet amiibo compatible avec de multiples jeux";
-$zelda->price = 62.41;
-$zelda->image = "./asset/amiibo-zelda_2x.png";
+$zelda = new Amiibo("Zelda", "Switch, Wii U, Nintendo DS");
+// $zelda->title = "Zelda";
+// $zelda->subtitle = "Switch, Wii U, Nintendo DS";
+$zelda->setDescription("Ne sous-estimez pas la princesse Zelda ! Découvrez
+        vite les avantages de cet amiibo compatible avec de multiples jeux");
+$zelda->setPrice(62.41);
+$zelda->setImage("./asset/amiibo-zelda_2x.png");
 
-$rider = new Amiibo();
-$rider->title = "Link [Rider]";
-$rider->subtitle = "Wii U, Switch, Switch Lite";
-$rider->description = "Il y a des chevaux et puis il y a Epona ! Découvrez vite
-        les avantages de cet amiibo compatible avec de multiples jeux";
-$rider->price = 54.08;
-$rider->image = "./asset/amiibo-link-rider_2x.png";
+$rider = new Amiibo("Link [Rider]", "Wii U, Switch, Switch Lite");
+// $rider->title = "Link [Rider]";
+// $rider->subtitle = "Wii U, Switch, Switch Lite";
+$rider->setDescription("Il y a des chevaux et puis il y a Epona ! Découvrez vite les avantages de cet amiibo compatible avec de multiples jeux");
+$rider->setPrice(54.08);
+$rider->setImage("./asset/amiibo-link-rider_2x.png");
 
 
 $data = [$archer, $zelda, $rider];
