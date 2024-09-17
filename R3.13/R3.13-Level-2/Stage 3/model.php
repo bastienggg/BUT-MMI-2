@@ -125,14 +125,102 @@ $rider->setImage("./asset/amiibo-link-rider_2x.png");
     N'oubliez pas de préciser les types des paramètres ainsi que des valeurs de retour pour les getters.
 */
 
+class Tshirt {
+        private $name;
+        private $description;
+        private $sizes;
+        private $price;
+        private $image;
+
+        public function __construct(string $name)
+        {
+                $this->name = $name;
+                $this->description = "";
+                $this->sizes = [];
+                $this->price = 0;
+                $this->image = "";
+        }
+
+        public function getName(): string
+        {
+                return $this->name;
+        }
+
+        public function getDescription(): string
+        {
+                return $this->description;
+        }
+
+        public function setDescription(string $description): self
+        {
+                $this->description = $description;
+                return $this;
+        }
+
+        public function getSizes(): string
+        {
+                return implode(" - ", $this->sizes);
+        }
+
+        public function setSizes(array $sizes): self
+        {
+                $this->sizes =$sizes;
+                return $this;
+        }
+
+        public function getPrice(): float
+        {
+                return round($this->price * 1.2, 2);
+        }
+
+        public function setPrice(float $price): self
+        {
+                $this->price = $price;
+                return $this;
+        }
+
+        public function getImage(): string
+        {
+                return $this->image;
+        }
+
+        public function setImage(string $image): self
+        {
+                $tab = explode(".", $image);
+                $ext = array_pop($tab);
+                if ($ext=="png" || $ext=="jpg" || $ext=="jpeg"){
+                        $this->image = $image;
+                }
+                return $this;
+        }
+}
+
 /*  Q2
 
     Instanciez 3 objets Tshirt et placez les dans le tableau $dataTshirt ci après.
     Regardez ./asset/objectif.png pour les valeurs à utiliser.
 */   
 
+$tshirt1 = new Tshirt("Tshirt Tri-Force");
+$tshirt1->setDescription("60% coton, 40% polyester . Laver a l'eau froide, ne pas utiliser de javel")
+        ->setSizes(["S", "M", "L", "XL"])
+        ->setPrice(29.9)
+        ->setImage("./asset/tshirt-triforce.png");
+
+$tshirt2 = new Tshirt("Tshirt Hyrule");
+$tshirt2->setDescription("30% coton, 70% polyester . Laver a l'eau froide, ne pas utiliser de javel")
+        ->setSizes(["M", "L", "XL", "XXL"])
+        ->setPrice(24.9)
+        ->setImage("./asset/tshirt-hyrule.png");
+
+$tshirt3 = new Tshirt("Tshirt Sheika");
+$tshirt3->setDescription("100% coton . Laver a l'eau froide, ne pas utiliser de javel")
+        ->setSizes(["XS", "S", "XL"])
+        ->setPrice(24.9)
+        ->setImage("./asset/tshirt-sheika.jpg");
+
 $dataAmiibo = [$archer, $zelda, $rider];
-$dataTshirt = [/*???*/];
+$dataTshirt = [$tshirt1, $tshirt2, $tshirt3];
 
 /*  Q3
 

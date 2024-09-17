@@ -23,6 +23,7 @@
         square.style.width = taille;
         square.style.height = taille;
         square.style.padding = padding;
+        square.style.borderRadius = "10%";
         square.style.display = "inline-block";
         return square;
       };
@@ -51,16 +52,43 @@
           div.style.backgroundColor = randomColor();
         }
       };
-      // imbricateSquare(1000);
 
-      multipleSquare(100);
+      // multipleSquare(100, "50px", "5px");
 
-      let handler_changeColor = function (ev) {
-        ev.target.style.backgroundColor = randomColor();
+      // let handler_changeColor = function (ev) {
+      //   ev.target.style.backgroundColor = randomColor();
+      // };
+      // document.body.addEventListener("click", handler_changeColor);
+
+      imbricateSquare(10);
+      /*
+
+      let handler_growPadding = function (ev) {
+        // if (ev.currentTarget.style.padding === "") {
+        //   let pad = parseFloat(ev.currentTarget.style.padding) + 3;
+        //   ev.currentTarget.style.padding = pad + "px";
+        // }
+
+        let pad = parseInt(ev.currentTarget.style.padding) + 3;
+        ev.currentTarget.style.padding = pad + "px";
+        ev.stopPropagation(); //pour empecher la propagation de l'evenement
       };
-      let alldivs = document.querySelectorAll("div");
-      for (let div of alldivs) {
-        div.addEventListener("click", handler_changeColor);
+
+      let allDiv = document.querySelectorAll("div");
+      for (let div of allDiv) {
+        div.addEventListener("click", handler_growPadding);
+      }
+        */
+
+      let count = 3;
+      let handler_growPadding = function (ev) {
+        count++;
+        ev.currentTarget.style.padding = count + "px";
+      };
+
+      let allDiv = document.querySelectorAll("div");
+      for (let div of allDiv) {
+        div.addEventListener("click", handler_growPadding, true); //true pour le mode capture donc on commence par le plus haut element du dom et on descend jusqu'a l'element cible de l'evenement
       }
     </script>
   </body>

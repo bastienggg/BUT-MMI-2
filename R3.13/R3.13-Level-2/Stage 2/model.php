@@ -99,31 +99,34 @@ class Amiibo
             $this->price = 0.0;
             $this->image = "";
         }
-    public function getName()
+    public function getName() : string
     {
         return $this->title;
     }
-    public function getManufacturer()
+    public function getManufacturer() : string
     {
         return $this->subtitle;
     }
-    public function getDescription()
+    public function getDescription() : string
     {
         return $this->description;
     }
-    public function setDescription($description)
+    public function setDescription($description) : self
     {
         $this->description = $description;
+        return $this;
     }
-    public function getPrice()
+    public function getPrice() : float
     {
         return round($this->price * 1.2, 2);
     }
-    public function setPrice($price)
+    public function setPrice($price) : self
     {
         $this->price = $price;
+        return $this;
     }
-    public function getImage() {
+    public function getImage() : string
+    {
         return $this->image;
     }
 
@@ -133,6 +136,7 @@ class Amiibo
         if ($ext=="png" || $ext=="jpg" || $ext=="jpeg"){
             $this->image = $image;
         }
+        return $this;
     }
 }
 

@@ -11,8 +11,9 @@ foreach ($dataAmiibo as $amiibo) {
     $content = $content . renderAmiibo($amiibo);
 }
 
-
-// ??????
+foreach ($dataTshirt as $tshirt) {
+    $content = $content . renderTshirt($tshirt);
+}
 
 ?>
 <!DOCTYPE>

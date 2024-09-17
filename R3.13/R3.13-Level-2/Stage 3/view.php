@@ -23,5 +23,8 @@ function renderAmiibo($amiibo)
 */
 function renderTshirt($tshirt)
 {
-    /// ?????
+    $template = file_get_contents("./templates/template-card-tshirt.html.inc");
+    $search = ["{{title}}", "{{sizes}}", "{{description}}", "{{price}}", "{{image}}"];
+    $replace = [$tshirt->getName(), $tshirt->getDescription(), $tshirt->getSizes(), $tshirt->getPrice(), $tshirt->getImage()];
+    return str_replace( $search, $replace, $template);
 }

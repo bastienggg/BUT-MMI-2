@@ -4,13 +4,50 @@
 
 @layer base {
   :root {
-    --clr-text-base: 0 0% 100%;
-    --clr-text-muted: 228 96% 89%;
-    --clr-text-inverted: 243 75% 59%;
+    --clr-white: 0 0% 100%;
 
-    --clr-fill: 245 58% 51%;
-    --clr-button-accent: 0 0% 100%;
-    --clr-button-accent-hover: 226 100% 97%;
-    --clr-button-muted: 239 84% 67%;
+    --clr-red-bg: 0 72% 51%;
+    --clr-red-btn: 0 91% 71%;
+
+    --clr-blue-bg: 245 58% 51%;
+    --clr-bleu-btn: 239 84% 67%;
+
+    --clr-green-bg: 83 78% 55%;
+    --clr-green-btn: 81 88% 80%;
+  }
+}
+
+@layer components {
+  .card-red {
+    @apply flex flex-col items-center bg-no-repeat bg-cover bg-bg-red p-6 rounded bg-blend-overlay md:m-5 md:w-4/5 md:p-11 lg:w-2/4 lg:p-11;
+  }
+
+  .btn-red {
+    @apply bg-white w-10/12 m-1 rounded p-2 text-center text-bg-red font-medium md:w-2/5 lg:w-1/4;
+  }
+
+  .btn-red-muted {
+    @apply bg-btn-red w-10/12 m-1 rounded p-2 text-center text-white font-medium md:w-2/5 lg:w-1/4;
+  }
+
+  .card-blue {
+    @apply flex flex-col items-center bg-no-repeat bg-cover bg-blend-overlay bg-bg-blue p-6 rounded md:m-5 md:w-4/5 md:p-11 lg:w-2/4 lg:p-11;
+  }
+
+  .btn-blue {
+    @apply bg-white w-10/12 m-1 rounded p-2 text-center text-indigo-700 font-medium md:w-2/5 lg:w-1/4;
+  }
+  .btn-blue-muted {
+    @apply bg-btn-blue w-10/12 m-1 rounded p-2 text-center text-white font-medium md:w-2/5 lg:w-1/4;
+  }
+  .card-green {
+    @apply flex flex-col items-center  bg-no-repeat bg-cover bg-blend-overlay bg-bg-green p-6 rounded md:m-5 md:w-4/5 md:p-11 lg:w-2/4 lg:p-11;
+  }
+
+  .btn-green {
+    @apply bg-black w-10/12 m-1 rounded p-2 text-center text-lime-400 font-medium md:w-2/5 lg:w-1/4;
+  }
+  .btn-green-muted {
+    @apply bg-btn-green w-10/12 m-1 rounded p-2 text-center text-black font-medium md:w-2/5 lg:w-1/4;
   }
 }
